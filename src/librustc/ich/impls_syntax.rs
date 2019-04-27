@@ -106,6 +106,7 @@ impl_stable_hash_for!(enum ::rustc_target::spec::abi::Abi {
     Msp430Interrupt,
     X86Interrupt,
     AmdGpuKernel,
+    X86PreserveAll,
     Rust,
     C,
     System,

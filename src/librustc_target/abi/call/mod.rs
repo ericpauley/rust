@@ -516,6 +516,7 @@ pub enum Conv {
     X86_64Win64,
 
     AmdGpuKernel,
+    X86PreserveAll,
 }
 
 /// Metadata describing how the arguments to a native function

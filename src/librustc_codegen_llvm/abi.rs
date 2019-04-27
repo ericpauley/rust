@@ -416,6 +416,7 @@ impl<'tcx> FnTypeExt<'tcx> for FnType<'tcx, Ty<'tcx>> {
             Msp430Interrupt => Conv::Msp430Intr,
             X86Interrupt => Conv::X86Intr,
             AmdGpuKernel => Conv::AmdGpuKernel,
+            X86PreserveAll => Conv::X86PreserveAll,
 
             // These API constants ought to be more specific...
             Cdecl => Conv::C,
@@ -746,6 +747,7 @@ impl<'tcx> FnTypeExt<'tcx> for FnType<'tcx, Ty<'tcx>> {
             Conv::X86VectorCall => llvm::X86_VectorCall,
             Conv::X86_64SysV => llvm::X86_64_SysV,
             Conv::X86_64Win64 => llvm::X86_64_Win64,
+            Conv::X86PreserveAll => llvm::PreserveAllCallConv,
         }
     }
 
